@@ -1,0 +1,2 @@
+class PedalboardsController < ApplicationController
+end
