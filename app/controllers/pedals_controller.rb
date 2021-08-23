@@ -27,7 +27,7 @@ class PedalsController < ApplicationController
     private
 
     def pedal_params
-        params.permit(:name, :username, :email, :notes, :password_digest)
+        params.permit(:name, :effect_type, :price, :stereo, :number_of_inputs, :number_of_outputs, :image, :category)
     end
 
     def find_pedal
