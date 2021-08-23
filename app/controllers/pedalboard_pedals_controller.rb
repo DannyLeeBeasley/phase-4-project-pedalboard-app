@@ -7,16 +7,21 @@ class PedalboardPedalsController < ApplicationController
         render json: pedalboard_pedals, status: :ok 
     end
 
+    def show
+        pedalboard_pedal = find_pedalboard_pedal
+        render json: pedalboard_pedal, status: :ok
+    end
+
     def create 
         pedalboard_pedal = PedalboardPedal.create(pedalboard_pedal_params)
         render json: pedalboard_pedal, status: :created
     end
 
-    def update
-        pedalboard_pedal = find_pedalboard_pedal
-        pedalboard_pedal.update(pedalboard_pedal_params)
-        render json: pedalboard_pedal, status: :created 
-    end
+    # def update
+    #     pedalboard_pedal = find_pedalboard_pedal
+    #     pedalboard_pedal.update(pedalboard_pedal_params)
+    #     render json: pedalboard_pedal, status: :created 
+    # end
 
     def destroy
         pedalboard_pedal = find_pedalboard_pedal

@@ -7,22 +7,27 @@ class PedalsController < ApplicationController
         render json: pedals, status: :ok 
     end
 
+    def show
+        pedal = find_pedal
+        render json: pedal, status: :ok
+    end
+
     def create 
         pedal = Pedal.create(pedal_params)
         render json: pedal, status: :created
     end
 
-    def update
-        pedal = find_pedal
-        pedal.update(pedal_params)
-        render json: pedal, status: :created 
-    end
+    # def update
+    #     pedal = find_pedal
+    #     pedal.update(pedal_params)
+    #     render json: pedal, status: :created 
+    # end
 
-    def destroy
-        pedal = find_pedal
-        pedal.destroy
-        head :no_content
-    end
+    # def destroy
+    #     pedal = find_pedal
+    #     pedal.destroy
+    #     head :no_content
+    # end
 
     private
 

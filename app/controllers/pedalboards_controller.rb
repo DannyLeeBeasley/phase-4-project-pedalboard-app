@@ -7,6 +7,11 @@ class PedalboardsController < ApplicationController
         render json: pedalboards, status: :ok 
     end
 
+    def show
+        pedalboard = find_pedalboard
+        render json: pedalboard, status: :ok
+    end
+
     def create 
         pedalboard = Pedalboard.create(pedalboard_params)
         render json: pedalboard, status: :created
