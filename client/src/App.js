@@ -38,6 +38,12 @@ function App() {
     setPedals(updatedPedalArray);
   }
 
+  function addNewPedalboard(newPedalboard) {
+    const updatedPedalboardArray = [...pedalboards, newPedalboard];
+    setPedalboards(updatedPedalArray);
+  }
+
+
   // const { token, setToken } = useToken();
 
   // if (!token) {
@@ -78,7 +84,7 @@ function App() {
             <Route path="/pedalboards">
               <PedalBoards />
             </Route>
-            <Route path="/newpedalboard">
+            <Route path="/newpedalboard" addNewPedalboard={addNewPedalboard}>
               <NewPedalBoard />
             </Route>
             <Route path="/">
