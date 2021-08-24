@@ -42,4 +42,5 @@ class PedalsController < ApplicationController
     def render_not_found_response
         render json: { error: pedal.errors.full_messages }, status: :not_found 
     end
+    
 end

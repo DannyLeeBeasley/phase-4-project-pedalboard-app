@@ -17,6 +17,15 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
+    def login
+        user = User.find_by(username: user_params[:username])
+        if(user && user.authenticate(user_params[:password]))
+            render json: user 
+        else
+            render json: { error: "incorrect username/password combination"}
+        end
+    end
+
     # def update
     #     user = find_user
     #     user.update(user_params)
@@ -32,7 +41,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:name, :username, :email, :notes, :password_digest)
+        params.permit(:name, :username, :email, :notes, :password)
     end
 
     def find_user
