@@ -1,9 +1,28 @@
 // import { useParams } from "react-router-dom";
-import React from "react";
-function NewPedalBoard() {
+import React, { useState } from "react";
+
+function NewPedalBoard({ addNewPedalboard }) {
+
+  const [name, setName] = useState('')
+  const [isStereo, setIsStereo] = useState(false)
+  // const [pedalOrder, setPedalOrder] = useState([])
+
   // const paramsPort = useParams();
-  const handleSubmit = async (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
+    fetch('http://localhost:3000/pedalboards', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        stereo: isStereo,
+        // pedal_order: pedalOrder
+      }),
+    })
+    .then(res => res.json())
+    .then(newPlant => addPlant(newPlant));
     window.location.href = "/pedalboards";
   };
   return (
@@ -12,14 +31,20 @@ function NewPedalBoard() {
       <form onSubmit={handleSubmit}>
         <label>
           Board Name
-          <input type="text" name="boardName"></input>
+          <input 
+            type="text" 
+            name="boardName"
+            placeholder="Board Name"
+            value={name}
+            onChange={(e) => {setName(e.target.value)}}
+            ></input>
         </label>
         <br />
         <label>
           Stereo?
           <select>
-            <option value="false">No</option>
-            <option value="true">Yes</option>
+            <option value="false" onChange={(e) => {setIsStereo(e.target.value)}}>No</option>
+            <option value="true" onChange={(e) => {setIsStereo(e.target.value)}}>Yes</option>
           </select>
         </label>
         <br />

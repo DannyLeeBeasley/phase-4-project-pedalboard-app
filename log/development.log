@@ -129,3 +129,400 @@ FOREIGN KEY ("pedal_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPedal Load (2.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (3.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPedal Load (0.7ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (2.1ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (1.2ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (1.2ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (1.2ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.5ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Dan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "DannyLeeBeasley"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dannyleebeasley@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "TrickyPassword13!"], ["LIMIT", 1]]
+  [1m[36mUser Create (10.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dan"], ["username", "DannyLeeBeasley"], ["email", "dannyleebeasley@gmail.com"], ["password_digest", "TrickyPassword13!"], ["created_at", "2021-08-24 18:35:54.720082"], ["updated_at", "2021-08-24 18:35:54.720082"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Gwyniver"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "GwnyniverRhy"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gwyniver.rhy@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "NeverGuess27!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gwyniver"], ["username", "GwnyniverRhy"], ["email", "gwyniver.rhy@gmail.com"], ["password_digest", "NeverGuess27!"], ["created_at", "2021-08-24 18:35:54.745944"], ["updated_at", "2021-08-24 18:35:54.745944"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Ibanez TS808 Tube Screamer"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Fulltone OCD V2"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Boss DD-8 Digital Delay"], ["LIMIT", 1]]
+  [1m[36mPedal Create (1.7ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss DD-8 Digital Delay"], ["effect_type", "delay"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://media.guitarcenter.com/is/image/MMGS7/DD-8-Digital-Delay-Effects-Pedal/L70091000000000-00-500x500.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:35:54.785744"], ["updated_at", "2021-08-24 18:35:54.785744"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Electro-Harmonix Holy Grail"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["LIMIT", 1]]
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["effect_type", "chorus"], ["price", 130], ["stereo", true], ["number_of_inputs", 1], ["number_of_outputs", 2], ["image", "https://static.roland.com/assets/images/products/gallery/ce_5_top_gal.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:35:54.801817"], ["updated_at", "2021-08-24 18:35:54.801817"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "MXR M101 Phase 90"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Walrus Audio Polychrome Analog Flanger"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Source Audio Vertigo Tremelo"], ["LIMIT", 1]]
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Source Audio Vertigo Tremelo"], ["effect_type", "tremelo"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://www.bhphotovideo.com/images/images1000x1000/source_audio_sa243_one_series_vertigo_tremolo_1331715.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:35:54.818295"], ["updated_at", "2021-08-24 18:35:54.818295"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Dunlop Cry Baby Standard Wah GCB95"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "MXR M-102 Dyna Comp Compressor"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "TC Electronic PolyTune Poly-Chromatic Tuner Pedal"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (3.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPedal Load (0.9ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (2.6ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.5ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Dan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "DannyLeeBeasley"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dannyleebeasley@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "TrickyPassword13!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dan"], ["username", "DannyLeeBeasley"], ["email", "dannyleebeasley@gmail.com"], ["password_digest", "TrickyPassword13!"], ["created_at", "2021-08-24 18:38:07.617954"], ["updated_at", "2021-08-24 18:38:07.617954"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Gwyniver"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "GwnyniverRhy"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gwyniver.rhy@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "NeverGuess27!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gwyniver"], ["username", "GwnyniverRhy"], ["email", "gwyniver.rhy@gmail.com"], ["password_digest", "NeverGuess27!"], ["created_at", "2021-08-24 18:38:07.631931"], ["updated_at", "2021-08-24 18:38:07.631931"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Ibanez TS808 Tube Screamer"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Fulltone OCD V2"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Boss DD-8 Digital Delay"], ["LIMIT", 1]]
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss DD-8 Digital Delay"], ["effect_type", "delay"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://media.guitarcenter.com/is/image/MMGS7/DD-8-Digital-Delay-Effects-Pedal/L70091000000000-00-500x500.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:38:07.668579"], ["updated_at", "2021-08-24 18:38:07.668579"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Electro-Harmonix Holy Grail"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["LIMIT", 1]]
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["effect_type", "chorus"], ["price", 130], ["stereo", true], ["number_of_inputs", 1], ["number_of_outputs", 2], ["image", "https://static.roland.com/assets/images/products/gallery/ce_5_top_gal.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:38:07.690599"], ["updated_at", "2021-08-24 18:38:07.690599"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "MXR M101 Phase 90"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Walrus Audio Polychrome Analog Flanger"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Source Audio Vertigo Tremelo"], ["LIMIT", 1]]
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Source Audio Vertigo Tremelo"], ["effect_type", "tremelo"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://www.bhphotovideo.com/images/images1000x1000/source_audio_sa243_one_series_vertigo_tremolo_1331715.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:38:07.709071"], ["updated_at", "2021-08-24 18:38:07.709071"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "Dunlop Cry Baby Standard Wah GCB95"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "MXR M-102 Dyna Comp Compressor"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pedals" WHERE "pedals"."name" = $1 LIMIT $2[0m  [["name", "TC Electronic PolyTune Poly-Chromatic Tuner Pedal"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPedal Load (0.3ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (1.1ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Destroy (0.4ms)[0m  [1m[31mDELETE FROM "pedals" WHERE "pedals"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Dan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "DannyLeeBeasley"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dannyleebeasley@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "TrickyPassword13!"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dan"], ["username", "DannyLeeBeasley"], ["email", "dannyleebeasley@gmail.com"], ["password_digest", "TrickyPassword13!"], ["created_at", "2021-08-24 18:41:05.626586"], ["updated_at", "2021-08-24 18:41:05.626586"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Gwyniver"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "GwnyniverRhy"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gwyniver.rhy@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "NeverGuess27!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gwyniver"], ["username", "GwnyniverRhy"], ["email", "gwyniver.rhy@gmail.com"], ["password_digest", "NeverGuess27!"], ["created_at", "2021-08-24 18:41:05.643051"], ["updated_at", "2021-08-24 18:41:05.643051"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ibanez TS808 Tube Screamer"], ["effect_type", "overdrive"], ["price", 100], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://m.media-amazon.com/images/I/713LJ9zI96L._AC_SS450_.jpg"], ["category", "gain"], ["created_at", "2021-08-24 18:41:05.648967"], ["updated_at", "2021-08-24 18:41:05.648967"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fulltone OCD V2"], ["effect_type", "overdrive"], ["price", 140], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/2161/9961/products/Fulltone-effect-OCD.jpg?v=1520232597"], ["category", "gain"], ["created_at", "2021-08-24 18:41:05.653424"], ["updated_at", "2021-08-24 18:41:05.653424"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss DD-8 Digital Delay"], ["effect_type", "delay"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://media.guitarcenter.com/is/image/MMGS7/DD-8-Digital-Delay-Effects-Pedal/L70091000000000-00-500x500.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:41:05.661536"], ["updated_at", "2021-08-24 18:41:05.661536"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (1.0ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Electro-Harmonix Holy Grail"], ["effect_type", "reverb"], ["price", 130], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://www.bhphotovideo.com/images/images500x500/electro_harmonix_nholygrail_holy_grail_neo_digital_1135939.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:41:05.675562"], ["updated_at", "2021-08-24 18:41:05.675562"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["effect_type", "chorus"], ["price", 130], ["stereo", true], ["number_of_inputs", 1], ["number_of_outputs", 2], ["image", "https://static.roland.com/assets/images/products/gallery/ce_5_top_gal.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:41:05.683751"], ["updated_at", "2021-08-24 18:41:05.683751"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (1.0ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "MXR M101 Phase 90"], ["effect_type", "phaser"], ["price", 80], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/0202/0250/products/MXR_Phase90_front-stock.jpg?v=1419892027"], ["category", "modulation"], ["created_at", "2021-08-24 18:41:05.688073"], ["updated_at", "2021-08-24 18:41:05.688073"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.7ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Walrus Audio Polychrome Analog Flanger"], ["effect_type", "flanger"], ["price", 200], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/0906/8480/files/Polychrome-cutout-front_700_1000x.png?v=1618320071"], ["category", "modulation"], ["created_at", "2021-08-24 18:41:05.693840"], ["updated_at", "2021-08-24 18:41:05.693840"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Source Audio Vertigo Tremelo"], ["effect_type", "tremelo"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://www.bhphotovideo.com/images/images1000x1000/source_audio_sa243_one_series_vertigo_tremolo_1331715.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:41:05.700600"], ["updated_at", "2021-08-24 18:41:05.700600"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.6ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Dunlop Cry Baby Standard Wah GCB95"], ["effect_type", "wah-wah"], ["price", 90], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://i.ebayimg.com/images/g/NA4AAOSwzl9f6c5p/s-l640.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:41:05.704596"], ["updated_at", "2021-08-24 18:41:05.704596"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "MXR M-102 Dyna Comp Compressor"], ["effect_type", "compressor"], ["price", 80], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://www.pitbullaudio.com/media/catalog/product/1/6/16001102001.main.jpg?quality=100&bg-color=255,255,255&fit=bounds&height=&width="], ["category", "gain"], ["created_at", "2021-08-24 18:41:05.711164"], ["updated_at", "2021-08-24 18:41:05.711164"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "TC Electronic PolyTune Poly-Chromatic Tuner Pedal"], ["effect_type", "reverb"], ["price", 90], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://m.media-amazon.com/images/I/71D+Kk+qkgL._AC_SS450_.jpg"], ["category", "tuner"], ["created_at", "2021-08-24 18:41:05.715084"], ["updated_at", "2021-08-24 18:41:05.715084"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPedal Load (1.1ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (73.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (72.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_test"[0m
+  [1m[35m (172.7ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (93.2ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedalboard_pedals" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "pedalboard_pedals" ("id" bigserial primary key, "pedalboard_id" bigint NOT NULL, "pedal_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_pedalboard_pedals_on_pedal_id" ON "pedalboard_pedals" ("pedal_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_pedalboard_pedals_on_pedalboard_id" ON "pedalboard_pedals" ("pedalboard_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedalboards" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "pedalboards" ("id" bigserial primary key, "name" character varying, "stereo" boolean, "pedal_order" integer[], "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_pedalboards_on_user_id" ON "pedalboards" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedals" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "effect_type" character varying, "price" integer, "stereo" boolean, "number_of_inputs" integer, "number_of_outputs" integer, "image" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "pedalboard_pedals" ADD CONSTRAINT "fk_rails_cba96ebfb8"
+FOREIGN KEY ("pedalboard_id")
+  REFERENCES "pedalboards" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "pedalboard_pedals" ADD CONSTRAINT "fk_rails_a47f42a76f"
+FOREIGN KEY ("pedal_id")
+  REFERENCES "pedals" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "pedalboards" ADD CONSTRAINT "fk_rails_cb59ee98ab"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210820163356)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210820160945),
+(20210820162143),
+(20210820162314);
+
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-24 18:45:25.675202"], ["updated_at", "2021-08-24 18:45:25.675202"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a7ad48a33bf1018a8a45bdcce147eb8409472337"], ["created_at", "2021-08-24 18:45:25.684866"], ["updated_at", "2021-08-24 18:45:25.684866"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedalboard_pedals" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "pedalboard_pedals" ("id" bigserial primary key, "pedalboard_id" bigint NOT NULL, "pedal_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_pedalboard_pedals_on_pedal_id" ON "pedalboard_pedals" ("pedal_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_pedalboard_pedals_on_pedalboard_id" ON "pedalboard_pedals" ("pedalboard_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedalboards" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "pedalboards" ("id" bigserial primary key, "name" character varying, "stereo" boolean, "pedal_order" integer[], "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_pedalboards_on_user_id" ON "pedalboards" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pedals" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "pedals" ("id" bigserial primary key, "name" character varying, "effect_type" character varying, "price" integer, "stereo" boolean, "number_of_inputs" integer, "number_of_outputs" integer, "image" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "pedalboard_pedals" ADD CONSTRAINT "fk_rails_cba96ebfb8"
+FOREIGN KEY ("pedalboard_id")
+  REFERENCES "pedalboards" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "pedalboard_pedals" ADD CONSTRAINT "fk_rails_a47f42a76f"
+FOREIGN KEY ("pedal_id")
+  REFERENCES "pedals" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "pedalboards" ADD CONSTRAINT "fk_rails_cb59ee98ab"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210820163356)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210820160945),
+(20210820162143),
+(20210820162314);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-24 18:45:25.792973"], ["updated_at", "2021-08-24 18:45:25.792973"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-08-24 18:45:25.799461"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "a7ad48a33bf1018a8a45bdcce147eb8409472337"], ["created_at", "2021-08-24 18:45:25.809765"], ["updated_at", "2021-08-24 18:45:25.809765"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPedal Load (0.5ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Dan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "DannyLeeBeasley"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dannyleebeasley@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "TrickyPassword13!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dan"], ["username", "DannyLeeBeasley"], ["email", "dannyleebeasley@gmail.com"], ["password_digest", "TrickyPassword13!"], ["created_at", "2021-08-24 18:45:25.908443"], ["updated_at", "2021-08-24 18:45:25.908443"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "Gwyniver"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "GwnyniverRhy"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gwyniver.rhy@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "NeverGuess27!"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Gwyniver"], ["username", "GwnyniverRhy"], ["email", "gwyniver.rhy@gmail.com"], ["password_digest", "NeverGuess27!"], ["created_at", "2021-08-24 18:45:25.923974"], ["updated_at", "2021-08-24 18:45:25.923974"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (1.1ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ibanez TS808 Tube Screamer"], ["effect_type", "overdrive"], ["price", 100], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://m.media-amazon.com/images/I/713LJ9zI96L._AC_SS450_.jpg"], ["category", "gain"], ["created_at", "2021-08-24 18:45:25.944421"], ["updated_at", "2021-08-24 18:45:25.944421"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fulltone OCD V2"], ["effect_type", "overdrive"], ["price", 140], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/2161/9961/products/Fulltone-effect-OCD.jpg?v=1520232597"], ["category", "gain"], ["created_at", "2021-08-24 18:45:25.953629"], ["updated_at", "2021-08-24 18:45:25.953629"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss DD-8 Digital Delay"], ["effect_type", "delay"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://media.guitarcenter.com/is/image/MMGS7/DD-8-Digital-Delay-Effects-Pedal/L70091000000000-00-500x500.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:45:25.959557"], ["updated_at", "2021-08-24 18:45:25.959557"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Electro-Harmonix Holy Grail"], ["effect_type", "reverb"], ["price", 130], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://www.bhphotovideo.com/images/images500x500/electro_harmonix_nholygrail_holy_grail_neo_digital_1135939.jpg"], ["category", "time"], ["created_at", "2021-08-24 18:45:25.967766"], ["updated_at", "2021-08-24 18:45:25.967766"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Boss CE-5 Chorus Ensemble"], ["effect_type", "chorus"], ["price", 130], ["stereo", true], ["number_of_inputs", 1], ["number_of_outputs", 2], ["image", "https://static.roland.com/assets/images/products/gallery/ce_5_top_gal.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:45:25.971958"], ["updated_at", "2021-08-24 18:45:25.971958"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.3ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "MXR M101 Phase 90"], ["effect_type", "phaser"], ["price", 80], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/0202/0250/products/MXR_Phase90_front-stock.jpg?v=1419892027"], ["category", "modulation"], ["created_at", "2021-08-24 18:45:25.976430"], ["updated_at", "2021-08-24 18:45:25.976430"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.2ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Walrus Audio Polychrome Analog Flanger"], ["effect_type", "flanger"], ["price", 200], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://cdn.shopify.com/s/files/1/0906/8480/files/Polychrome-cutout-front_700_1000x.png?v=1618320071"], ["category", "modulation"], ["created_at", "2021-08-24 18:45:25.989969"], ["updated_at", "2021-08-24 18:45:25.989969"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Source Audio Vertigo Tremelo"], ["effect_type", "tremelo"], ["price", 170], ["stereo", true], ["number_of_inputs", 2], ["number_of_outputs", 2], ["image", "https://www.bhphotovideo.com/images/images1000x1000/source_audio_sa243_one_series_vertigo_tremolo_1331715.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:45:25.995589"], ["updated_at", "2021-08-24 18:45:25.995589"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Dunlop Cry Baby Standard Wah GCB95"], ["effect_type", "wah-wah"], ["price", 90], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://i.ebayimg.com/images/g/NA4AAOSwzl9f6c5p/s-l640.jpg"], ["category", "modulation"], ["created_at", "2021-08-24 18:45:26.001066"], ["updated_at", "2021-08-24 18:45:26.001066"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.5ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "MXR M-102 Dyna Comp Compressor"], ["effect_type", "compressor"], ["price", 80], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://www.pitbullaudio.com/media/catalog/product/1/6/16001102001.main.jpg?quality=100&bg-color=255,255,255&fit=bounds&height=&width="], ["category", "gain"], ["created_at", "2021-08-24 18:45:26.006183"], ["updated_at", "2021-08-24 18:45:26.006183"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPedal Create (0.4ms)[0m  [1m[32mINSERT INTO "pedals" ("name", "effect_type", "price", "stereo", "number_of_inputs", "number_of_outputs", "image", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "TC Electronic PolyTune Poly-Chromatic Tuner Pedal"], ["effect_type", "reverb"], ["price", 90], ["stereo", false], ["number_of_inputs", 1], ["number_of_outputs", 1], ["image", "https://m.media-amazon.com/images/I/71D+Kk+qkgL._AC_SS450_.jpg"], ["category", "tuner"], ["created_at", "2021-08-24 18:45:26.011222"], ["updated_at", "2021-08-24 18:45:26.011222"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPedal Load (0.4ms)[0m  [1m[34mSELECT "pedals".* FROM "pedals" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]

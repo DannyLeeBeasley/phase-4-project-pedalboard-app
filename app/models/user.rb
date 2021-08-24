@@ -14,5 +14,4 @@ class User < ApplicationRecord
     # def authenticate(password)
     #     BCrypt::Password.new(self.password_digest) == password
     # end
-
 end
