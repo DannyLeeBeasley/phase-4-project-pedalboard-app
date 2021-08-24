@@ -1,0 +1,21 @@
+.pedals {
+  border: 3px solid rgb(103, 122, 68);
+  border-radius: 20px;
+  padding: 10px;
+  margin: auto;
+}
+
+.pedal {
+  border: 3px solid rgb(168, 157, 4);
+  border-radius: 20px;
+  width: 450px;
+  margin: auto;
+  background-color: rgb(117, 56, 56);
+}
+
+.pedal-img {
+  max-width: 300px;
+  max-height: 500px;
+  border: 1px solid;
+  border-radius: 20px;
+}

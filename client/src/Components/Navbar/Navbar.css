@@ -1,7 +1,7 @@
 .NavbarItems {
   /* background: linear-gradient(90deg, rgb(160, 76, 76) 0%, rgb(58, 0, 0) 120%); */
   background-image: url("michael-dziedzic-zqbTr1jwSxc-unsplash.jpg");
-  background-size: 50%;
+  background-size: 75%;
   height: 100px;
   display: flex;
   justify-content: left;
@@ -20,21 +20,15 @@
 
 .navbar-logo {
   color: rgb(255, 209, 139);
+  text-shadow: 2px 2px #1d1c00;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   top: 10px;
-  text-shadow: 2px 2px #1d1c00;
-}
-
-.fa-phoenix-squadron {
-  color: rgb(1, 255, 107);
-  /* margin: 0.5rem; */
-  /* font-size: 1.6rem; */
 }
 
 .nav-links {
-  color: rgb(1, 255, 107);
+  color: rgb(255, 209, 139);
   text-shadow: 2px 2px #1d1c00;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -48,12 +42,36 @@
   transition: all 5s ease-out;
 }
 
+.pedals:hover {
+  fill: rgb(148, 62, 76);
+}
+
+.pedal1:hover {
+  fill: rgb(145, 0, 24);
+}
+.pedal2:hover {
+  fill: rgb(0, 247, 82);
+}
+.pedal3:hover {
+  fill: rgb(247, 161, 0);
+}
+
 .fa-bars {
-  color: rgb(1, 255, 107);
+  color: rgb(255, 209, 139);
+  text-shadow: 2px 2px #1d1c00;
+}
+.fa-bars:active {
+  color: rgb(94, 0, 16);
+  text-shadow: 2px 2px #1d1c00;
 }
 
 .fa-times {
-  color: rgb(1, 255, 107);
+  color: rgb(255, 209, 139);
+  text-shadow: 2px 2px #1d1c00;
+}
+.fa-times:active {
+  color: rgb(94, 0, 16);
+  text-shadow: 2px 2px #1d1c00;
 }
 
 .nav-links-mobile {
@@ -95,7 +113,7 @@
     /* top: 180px; */
 
     border-radius: 30px;
-    width: 200px;
+    width: 250px;
     height: 300px;
     right: 0%;
     position: absolute;
@@ -115,7 +133,7 @@
   }
 
   .nav-links:hover {
-    background-color: pink;
+    background-color: rgba(56, 0, 9, 0.822);
     border-radius: 20;
   }
 

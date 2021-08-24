@@ -10,10 +10,10 @@ import PedalBoards from "./Components/PedalBoard/PedalBoards";
 import NewPedalBoard from "./Components/PedalBoard/NewPedalBoard";
 import useToken from "./useToken";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  // const [pedals, setPedals] = useState([]);
+  const [pedals, setPedals] = useState([]);
 
   // useEffect(() => {
   //   async function fetchPedals() {
@@ -24,6 +24,15 @@ function App() {
   //     }
   //   }
   // });
+  useEffect(() => {
+    fetch("http://localhost:3000/pedals")
+      .then((r) => r.json())
+      .then((pedals) => {
+        console.log(pedals);
+        setPedals(pedals);
+      });
+  }, []);
+
   // const { token, setToken } = useToken();
 
   // if (!token) {
@@ -53,7 +62,7 @@ function App() {
               <Login />
             </Route>
             <Route path="/pedals">
-              <Pedals />
+              <Pedals pedals={pedals} setPedals={setPedals} />
             </Route>
             <Route path="/mypedals">
               <MyPedals />
