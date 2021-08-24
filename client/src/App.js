@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [pedals, setPedals] = useState([]);
+  const [pedalboards, setPedalboards] = useState([]);
 
   // useEffect(() => {
   //   async function fetchPedals() {
