@@ -17,13 +17,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
+  host: localhost
+  username: postgres
+  password: pedal
 
 development:
   <<: *default
   database: react_rails_api_project_template_development
+
+  # password: "pedal"
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -32,7 +35,6 @@ development:
   #username: react_rails_api_project_template
 
   # The password associated with the postgres role (username).
-  #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -83,4 +85,4 @@ production:
   <<: *default
   database: react_rails_api_project_template_production
   username: react_rails_api_project_template
-  password: <%= ENV['REACT_RAILS_API_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>
+  # password: pedal

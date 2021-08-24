@@ -69,7 +69,8 @@ function NewPedal( { addNewPedal } ) {
             <option value="pitch">pitch</option>
             <option value="ring modulation">ring modulation</option>
             <option value="flanger">flanger</option>
-            <option value="phase">phase</option>
+            <option value="phaser">phaser</option>
+            <option value="wah">wah</option>
             <option value="rotary">rotary</option>
             <option value="tremolo">tremolo</option>
             <option value="filter">tremolo</option>
