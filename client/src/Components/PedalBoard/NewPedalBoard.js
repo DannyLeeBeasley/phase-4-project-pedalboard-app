@@ -22,7 +22,7 @@ function NewPedalBoard({ addNewPedalboard }) {
       }),
     })
     .then(res => res.json())
-    .then(newPlant => addPlant(newPlant));
+    .then(NewPedalboard => addNewPedalboard(NewPedalboard));
     window.location.href = "/pedalboards";
   };
   return (

@@ -41,7 +41,7 @@ function App() {
 
   function addNewPedalboard(newPedalboard) {
     const updatedPedalboardArray = [...pedalboards, newPedalboard];
-    setPedalboards(updatedPedalArray);
+    setPedalboards(updatedPedalboardArray);
   }
 
 

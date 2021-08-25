@@ -126,7 +126,7 @@ function NewPedal( { addNewPedal } ) {
         <label>
           Image
           <input
-            type="file"
+            type="text"
             name="image"
             value={image}
             onChange={(e) => {setImage(e.target.value)}}
