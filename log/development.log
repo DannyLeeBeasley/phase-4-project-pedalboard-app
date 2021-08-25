@@ -1943,3 +1943,28 @@ Processing by PedalsController#index as */*
 Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 2.7ms | Allocations: 2600)
 
 
+Started GET "/pedals" for ::1 at 2021-08-25 17:25:30 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PedalsController#index as */*
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms | Allocations: 3750)
+
+
+  
+NameError (uninitialized constant ApplicationController::Cookies):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<main>'
+app/models/pedal.rb:1:in `<main>'
+app/controllers/pedals_controller.rb:6:in `index'
+Started GET "/pedals" for ::1 at 2021-08-25 17:25:40 -0500
+Processing by PedalsController#index as */*
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1815)
+
+
+  
+NameError (uninitialized constant ApplicationController::Cookies):
+  
+app/models/application_record.rb:3:in `<class:ApplicationRecord>'
+app/models/application_record.rb:1:in `<main>'
+app/models/pedal.rb:1:in `<main>'
+app/controllers/pedals_controller.rb:6:in `index'

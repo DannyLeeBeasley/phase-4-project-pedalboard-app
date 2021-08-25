@@ -17,14 +17,14 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
-    def login
-        user = User.find_by(username: user_params[:username])
-        if(user && user.authenticate(user_params[:password]))
-            render json: user 
-        else
-            render json: { error: "incorrect username/password combination"}
-        end
-    end
+    # def login
+    #     user = User.find_by(username: user_params[:username])
+    #     if(user && user.authenticate(user_params[:password]))
+    #         render json: user 
+    #     else
+    #         render json: { error: "incorrect username/password combination"}
+    #     end
+    # end
 
     # def update
     #     user = find_user
