@@ -22,6 +22,15 @@ function Pedals({ pedals, setPedals }) {
   return (
     <div className="pedals">
       <h1 className="pedals-head">Pedals</h1>
+      <div className="pedal-nav-links">
+        <a className="new-pedal-link" href="./newpedal">
+          Make New Pedal
+        </a>
+
+        <a className="my-pedals-link" href="./mypedals">
+          My Pedal Collection
+        </a>
+      </div>
       {pedals.map((p) => {
         return (
           <Pedal
@@ -35,13 +44,6 @@ function Pedals({ pedals, setPedals }) {
           />
         );
       })}
-      <a className="New-Pedal-Link" href="./newpedal">
-        Make New Pedal
-      </a>
-      <br />
-      <a className="My-Pedals-Link" href="./mypedals">
-        My Pedal Collection
-      </a>
     </div>
   );
 }

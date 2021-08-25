@@ -1,24 +1,71 @@
 import React, { Component, useState } from "react";
 import { Form } from "semantic-ui-react";
 import "./Pedals.css";
-function NewPedal() {
-  const handleSubmit = async (e) => {
+
+function NewPedal({ addNewPedal }) {
+  const [name, setName] = useState("");
+  const [effectType, setEffectType] = useState("");
+  const [isStereo, setIsStereo] = useState(false);
+  const [numberOfInputs, setNumberOfInputs] = useState("");
+  const [numberOfOutputs, setNumberOfOutputs] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+  const [category, setCategory] = useState("");
+
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log("test", e.target.pedalName.value, e.target.stereo.value);
+    fetch("http://localhost:3000/pedals", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        effect_type: effectType,
+        price: price,
+        stereo: isStereo,
+        number_of_inputs: numberOfInputs,
+        number_of_outputs: numberOfOutputs,
+        image: image,
+        category: category,
+      }),
+    })
+      .then((res) => res.json())
+      .then((newPedal) => addNewPedal(newPedal));
     window.location.href = "/pedals";
-  };
+  }
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   console.log("test", e.target.pedalName.value, e.target.stereo.value);
+  //   window.location.href = "/pedalboards";
+  // };
+
   return (
     <div className="new-pedal">
       <h1 className="new-pedal-header">NewPedal</h1>
       <Form className="new-pedal-form" onSubmit={handleSubmit}>
         <label>
           Pedal Name
-          <input type="text" name="pedalName" />
+          <input
+            type="text"
+            name="pedalName"
+            placeholder="Pedal Name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
         </label>
         <br />
         <label>
           Effects Type
-          <select name="effectsType">
+          <select
+            name="effectsType"
+            onChange={(e) => {
+              setEffectType(e.target.value);
+            }}
+          >
             <option value="distortion">distortion</option>
             <option value="gain">gain</option>
             <option value="fuzz">fuzz</option>
@@ -44,7 +91,12 @@ function NewPedal() {
         <br />
         <label>
           Stereo?
-          <select name="stereo">
+          <select
+            name="stereo"
+            onChange={(e) => {
+              setIsStereo(e.target.value);
+            }}
+          >
             <option value="false">No</option>
             <option value="true">Yes</option>
           </select>
@@ -52,32 +104,65 @@ function NewPedal() {
         <br />
         <label>
           Number of Inputs
-          <input type="integer" name="numberOfInputs" />
+          <input
+            type="integer"
+            name="numberOfInputs"
+            placeholder="Number Of Inputs"
+            value={numberOfInputs}
+            onChange={(e) => {
+              setNumberOfInputs(e.target.value);
+            }}
+          />
         </label>
         <br />
         <label>
           Number of Outputs
-          <input type="integer" name="numberOfOutputs" />
+          <input
+            type="integer"
+            name="numberOfOutputs"
+            placeholder="Number Of Outputs"
+            value={numberOfOutputs}
+            onChange={(e) => {
+              setNumberOfOutputs(e.target.value);
+            }}
+          />
         </label>
         <br />
         <label>
           Price
-          <input type="text" name="price" />
+          <input
+            type="text"
+            name="price"
+            placeholder="Price"
+            value={price}
+            onChange={(e) => {
+              setPrice(e.target.value);
+            }}
+          />
         </label>
         <br />
         <label>
           Image
           <input
-            type="file"
+            type="text"
             name="image"
+            value={image}
+            onChange={(e) => {
+              setImage(e.target.value);
+            }}
             // value={selectedFile}
             // onChange={(e) => setSelectedFile(e.target.files[0])}
           />
         </label>
         <br />
         <label>
-          Effects Type
-          <select name="effectsType">
+          Effects Category
+          <select
+            name="effectsCategory"
+            onChange={(e) => {
+              setCategory(e.target.value);
+            }}
+          >
             <option value="dynamics">dynamics</option>
             <option value="gain">gain</option>
             <option value="modulation">modulation</option>

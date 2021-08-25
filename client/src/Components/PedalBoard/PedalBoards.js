@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import PedalBoard from "./PedalBoard.js";
-class PedalBoards extends Component {
-  render() {
-    return (
-      <div>
-        <h1>PedalBoards</h1>
-        <a className="New-Pedal-Link" href="./newpedalboard">
+import "./Pedalboard.css";
+function PedalBoards({ pedalboards }) {
+  console.log("test", pedalboards);
+  return (
+    <div>
+      <h1 className="pedalboard-head">Pedalboards</h1>
+      <div className="pedalboard-body">
+        <a className="new-pedalboard-link" href="./newpedalboard">
           Make New PedalBoard
         </a>
-        <PedalBoard />
       </div>
-    );
-  }
+      {pedalboards.map((pb) => {
+        return (
+          <PedalBoard name={pb.name} stereo={pb.stereo} pedals={pb.pedals} />
+        );
+      })}
+    </div>
+  );
 }
 
 export default PedalBoards;

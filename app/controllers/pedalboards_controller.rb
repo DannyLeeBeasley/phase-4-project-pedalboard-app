@@ -3,8 +3,9 @@ class PedalboardsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
-        pedalboards = Pedalboard.all 
-        render json: pedalboards, status: :ok 
+        pedalboards = Pedalboard.all
+                       
+        render json: pedalboards.as_json(include: :pedals), status: :ok 
     end
 
     def show

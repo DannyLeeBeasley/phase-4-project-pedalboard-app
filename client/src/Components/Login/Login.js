@@ -27,7 +27,7 @@ export default function Login({ setToken }) {
 
   return (
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
+      <h1 className="login-head">Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
@@ -49,7 +49,9 @@ export default function Login({ setToken }) {
           <input type="submit" value="Submit"></input>
         </div>
       </form>
-      <a href="./newuser">New User? Make a new account!</a>
+      <a className="new-user-link" href="./newuser">
+        New User? Sign up!
+      </a>
     </div>
   );
 }
