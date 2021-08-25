@@ -21,7 +21,7 @@ function Pedals({ pedals, setPedals }) {
 
   return (
     <div className="pedals">
-      <h1>Pedals</h1>
+      <h1 className="pedals-head">Pedals</h1>
       {pedals.map((p) => {
         return (
           <Pedal

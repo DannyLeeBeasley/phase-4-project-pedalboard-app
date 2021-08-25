@@ -2,7 +2,7 @@
   /* background: linear-gradient(90deg, rgb(160, 76, 76) 0%, rgb(58, 0, 0) 120%); */
   background-image: url("michael-dziedzic-zqbTr1jwSxc-unsplash.jpg");
   background-size: 75%;
-  height: 100px;
+  height: 120px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -21,10 +21,25 @@
 .navbar-logo {
   color: rgb(255, 209, 139);
   text-shadow: 2px 2px #1d1c00;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   top: 10px;
+
+  transition: all 2s ease-in-out;
+}
+.navbar-logo:hover {
+  color: rgb(248, 187, 96);
+  text-shadow: 10px 8px #879e4db0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  top: 6px;
+  transition: all 2s ease-in-out;
 }
 
 .nav-links {
@@ -34,12 +49,19 @@
   padding: 0.5rem 1rem;
   overflow: hidden;
   width: 50%;
+  text-shadow: 1.5px 1.5px #353424;
+  -webkit-text-shadow-stroke-width: 0.5px;
+  -webkit-text-shadow-stroke-color: black;
 }
 
 .nav-links:hover {
+  color: rgb(104, 84, 54);
   width: 20%;
   border-radius: 30px;
   transition: all 5s ease-out;
+  text-shadow: 4px 4px rgb(255, 185, 79);
+  -webkit-text-shadow-stroke-width: 0.5px;
+  -webkit-text-shadow-stroke-color: black;
 }
 
 .pedals:hover {
@@ -91,17 +113,17 @@
     background-image: fixed url("michael-dziedzic-zqbTr1jwSxc-unsplash.jpg");
     background-size: 700px;
     border-radius: 30px;
-    visibility: hidden;
     display: flex;
     flex-direction: column;
     width: 200px;
     height: 300px;
     position: absolute;
-    top: -10px;
+    top: 120px;
     right: -25%;
     opacity: 1;
-    transition: all 2s ease;
-    transform: rotate(90deg);
+    transition: all 0.175s ease-in-out;
+    /* visibility: hidden; */
+    /* transform: rotate(90deg); */
   }
 
   .nav-menu.active {
@@ -117,11 +139,11 @@
     height: 300px;
     right: 0%;
     position: absolute;
-    top: 80px;
+    top: 120px;
     opacity: 100%;
     transition: all 2s ease-in-out;
     z-index: 1;
-    transform: rotate(0deg);
+    /* transform: rotate(0deg); */
   }
 
   .nav-links {

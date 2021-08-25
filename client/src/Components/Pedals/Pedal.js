@@ -4,7 +4,7 @@ import "./Pedals.css";
 function Pedal({ name, image, effectsType, stereo, ins, outs, price }) {
   return (
     <div className="pedal">
-      <h2>{name}</h2>
+      <h2 className="pedal-name">{name}</h2>
       <br />
       <div>
         <img src={image} alt="Pedal" className="pedal-img"></img>
@@ -20,7 +20,12 @@ function Pedal({ name, image, effectsType, stereo, ins, outs, price }) {
       <br />
       <div>Price: ${price}</div>
       <br />
-      <button name="addPedalToCollection">Add Pedal To Collection</button>{" "}
+      <input
+        className="add-pedal"
+        type="button"
+        value="Add To Collection"
+        onClick=""
+      ></input>
       <br />
     </div>
   );

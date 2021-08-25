@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import { Form } from "semantic-ui-react";
+import "./Pedals.css";
 function NewPedal() {
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -7,8 +8,8 @@ function NewPedal() {
     window.location.href = "/pedals";
   };
   return (
-    <div>
-      <h1>NewPedal</h1>
+    <div className="new-pedal">
+      <h1 className="new-pedal-header">NewPedal</h1>
       <Form className="new-pedal-form" onSubmit={handleSubmit}>
         <label>
           Pedal Name
@@ -85,7 +86,11 @@ function NewPedal() {
           </select>
         </label>
         <br />
-        <input type="submit" value="Submit"></input>
+        <input
+          type="submit"
+          className="new-pedal-submit-button"
+          value="Submit"
+        ></input>
       </Form>
     </div>
   );
