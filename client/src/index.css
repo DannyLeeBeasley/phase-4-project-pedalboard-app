@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(39, 35, 35);
   color: rgb(240, 233, 168);
+  scroll-behavior: disabled;
 }
 
 code {

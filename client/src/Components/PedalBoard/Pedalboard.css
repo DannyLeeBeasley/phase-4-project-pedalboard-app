@@ -14,6 +14,70 @@
   transition: all 3s ease-in-out;
 }
 
+.update-pedalboard {
+  margin: auto;
+  font-family: "Bungee", cursive;
+  padding: 5px;
+  color: rgb(216, 171, 104);
+  filter: brightness(2);
+  -webkit-filter: brightness(2);
+  text-shadow: 2px 2px #1d1c00;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+  /* font-weight: bold; */
+  font-size: 18px;
+  background-image: url("../Navbar/michael-dziedzic-zqbTr1jwSxc-unsplash.jpg");
+  transition: all 3s ease-in-out;
+  border-radius: 10px;
+}
+.update-pedalboard:hover {
+  font-family: "Bungee", cursive;
+  background-color: rgb(66, 51, 51);
+
+  color: rgb(228, 156, 0);
+  text-shadow: 3px 3px #b9d46f;
+  -webkit-text-shadow-stroke-width: 1px;
+  -webkit-text-shadow-stroke-color: black;
+  /* font-weight: bold; */
+  font-size: 18px;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+  transition: all 3s ease-in-out;
+  border-radius: 10px;
+}
+
+.delete-pedalboard {
+  margin: auto;
+  font-family: "Bungee", cursive;
+  padding: 5px;
+  color: rgb(216, 171, 104);
+  filter: brightness(2);
+  -webkit-filter: brightness(2);
+  text-shadow: 2px 2px #1d1c00;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+  /* font-weight: bold; */
+  font-size: 18px;
+  background-image: url("../Navbar/michael-dziedzic-zqbTr1jwSxc-unsplash.jpg");
+  transition: all 3s ease-in-out;
+  border-radius: 10px;
+}
+.delete-pedalboard:hover {
+  font-family: "Bungee", cursive;
+  background-color: rgb(66, 51, 51);
+
+  color: rgb(228, 156, 0);
+  text-shadow: 3px 3px #b9d46f;
+  -webkit-text-shadow-stroke-width: 1px;
+  -webkit-text-shadow-stroke-color: black;
+  /* font-weight: bold; */
+  font-size: 18px;
+  -webkit-text-stroke-width: 0.75px;
+  -webkit-text-stroke-color: black;
+  transition: all 3s ease-in-out;
+  border-radius: 10px;
+}
+
 .new-pedalboard-head {
   text-shadow: 2px 2px #929174;
   -webkit-text-stroke-width: 0.5px;
@@ -60,4 +124,42 @@
   -webkit-text-stroke-color: black;
   transition: all 3s ease-in-out;
   border-radius: 10px;
+}
+
+.new-pedalboard-body {
+  /* width: 90%; */
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  overflow: scroll;
+  scroll-behavior: scroll;
+}
+.new-pedalboard-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(117, 56, 56);
+  max-width: 300px;
+  max-height: 500px;
+  border: 1px solid rgb(168, 157, 4);
+  border-radius: 20px;
+  margin: 10px auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+.new-pedalboard-pedal-img {
+  max-width: 60px;
+  max-height: 100px;
+  margin: 5px auto;
+  /* border: 1px solid black;
+  border-radius: 20px; */
+}
+
+.new-pedalboard-card-name {
+  width: 100px;
+  wrap: wrap;
 }

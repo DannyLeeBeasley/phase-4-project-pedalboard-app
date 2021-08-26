@@ -117,11 +117,11 @@
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 0px;
     min-height: 300px;
     position: absolute;
     top: 120px;
-    right: -25%;
+    left: -25%;
     opacity: 1;
     transition: all 0.175s ease-in-out;
     visibility: hidden;
@@ -137,9 +137,9 @@
     /* top: 180px; */
 
     border-radius: 30px;
-    max-width: 350px;
+    max-width: 600px;
     min-height: 300px;
-    right: 0%;
+    left: 0%;
     position: absolute;
     top: 120px;
     opacity: 100%;
@@ -159,7 +159,8 @@
   .nav-links:hover {
     background-color: rgba(56, 0, 9, 0.822);
     border-radius: 20;
-    margin-right: 20px;
+    padding: 2rem;
+    margin-left: 20px;
     transition: all 2s ease-in-out;
   }
 
@@ -203,7 +204,7 @@
     background-color: goldenrod;
   } */
 
-  Button {
+  /* Button {
     display: none;
-  }
+  } */
 }

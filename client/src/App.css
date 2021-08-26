@@ -4,6 +4,7 @@
   background-color: rgb(39, 35, 35);
   text-align: center;
   margin: auto;
+  scroll-behavior: none;
 }
 
 .guitar-body {
