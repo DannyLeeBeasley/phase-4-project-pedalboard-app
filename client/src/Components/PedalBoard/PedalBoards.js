@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PedalBoard from "./PedalBoard.js";
 import "./Pedalboard.css";
-function PedalBoards({ pedalboards }) {
+function PedalBoards({ pedalboards, addNewPedalboard }) {
   console.log("test", pedalboards);
   return (
     <div>
@@ -13,7 +13,14 @@ function PedalBoards({ pedalboards }) {
       </div>
       {pedalboards.map((pb) => {
         return (
-          <PedalBoard name={pb.name} stereo={pb.stereo} pedals={pb.pedals} />
+          <PedalBoard
+            addNewPedalboard={addNewPedalboard}
+            id={pb.id}
+            name={pb.name}
+            stereo={pb.stereo}
+            pedals={pb.pedals}
+            pedalboards={pedalboards}
+          />
         );
       })}
     </div>

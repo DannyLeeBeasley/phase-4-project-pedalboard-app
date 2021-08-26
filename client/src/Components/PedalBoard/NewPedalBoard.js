@@ -5,35 +5,21 @@ import "./Pedalboard.css";
 function NewPedalBoard({ addNewPedalboard, pedals }) {
   const [name, setName] = useState("");
   const [isStereo, setIsStereo] = useState(false);
-  const [pedalOrder, setPedalOrder] = useState([]);
-  const [inputList, setInputList] = useState([{ pedalArr: pedalList() }]);
-
-  function pedalList() {
-    pedals.map((p) => {
-      console.log("mypedals", p.name);
-      return <option value="{p.name}">{p.name}</option>;
-    });
-  }
+  // const [pedalOrder, setPedalOrder] = useState([]);
+  const [addedPedals, setAddedPedals] = useState([]);
+  const [selectedPedalId, setSelectedPedalId] = useState();
+  console.log("What what?", addedPedals);
 
   function handleAddClick() {
-    setInputList([...inputList, { pedalArr: pedalList(pedals) }]);
-  }
-  function handleRemoveClick(index) {
-    const list = [...inputList];
-    list.splice(index, 1);
-    setInputList(list);
+    if (selectedPedalId === 0) return;
+    setAddedPedals([
+      ...addedPedals,
+      pedals.find((pedal) => pedal.id === selectedPedalId),
+    ]);
+
+    console.log("B Test 2", typeof selectedPedalId);
   }
 
-  function handleChange(e, index) {
-    const { name, value } = e.target;
-
-    const list = [...inputList];
-    list[index][name] = value;
-
-    setInputList({
-      list,
-    });
-  }
   // const [pedalOrder, setPedalOrder] = useState([])
 
   // const paramsPort = useParams();
@@ -47,7 +33,11 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
       body: JSON.stringify({
         name: name,
         stereo: isStereo,
-        pedal_order: pedalOrder,
+        pedal_order: "",
+        user_id: 2,
+        pedal_ids: addedPedals.map((pedal) => {
+          return pedal.id;
+        }),
       }),
     })
       .then((res) => res.json())
@@ -93,37 +83,67 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
           </select>
         </label>
         <br />
-        {inputList.map((x, i) => {
-          return (
-            <div key={i}>
-              <label>
-                Add Pedal
-                <select
-                  name="pedal"
-                  value={x.pedalArr}
-                  onchange={(e) => {
-                    setPedalOrder(e.target.value);
-                  }}
-                >
-                  {x.pedalArr}
-                </select>
-              </label>
-              <input
-                type="button"
-                value="Remove Pedal"
-                onClick={handleRemoveClick}
-              ></input>
-              <input
-                type="button"
-                value="Add Pedal?"
-                onClick={handleAddClick}
-              ></input>
-            </div>
-          );
-        })}
+        <select
+          name="pedal"
+          value={selectedPedalId}
+          onChange={(e) => {
+            console.log(typeof e.target.value);
+            setSelectedPedalId(Number(e.target.value));
+          }}
+        >
+          <option>-Select Pedal-</option>
+          {pedals.map((pedal) => {
+            return <option value={pedal.id}>{pedal.name}</option>;
+          })}
+        </select>
+        <input
+          type="button"
+          value="Add Pedal?"
+          onClick={handleAddClick}
+        ></input>
+        <h2>←Output←←←Input←</h2>
+        <div className="new-pedalboard-body">
+          {addedPedals.map((pedal, i) => (
+            <Pedal
+              // handleRemoveClick={handleRemoveClick}
+              setAddedPedals={setAddedPedals}
+              addedPedals={addedPedals}
+              pedal={pedal}
+              key={i}
+              pedalIndex={i}
+            />
+          ))}
+        </div>
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
+    </div>
+  );
+}
+
+function Pedal({ pedal, addedPedals, setAddedPedals, pedalIndex }) {
+  function handleRemoveClick() {
+    console.log(pedalIndex);
+    const list = [...addedPedals];
+    list.splice(pedalIndex, 1);
+    setAddedPedals(list);
+  }
+  return (
+    <div className="new-pedalboard-card">
+      <div>
+        <img
+          className="new-pedalboard-pedal-img"
+          alt={pedal.name}
+          src={pedal.image}
+        ></img>
+      </div>
+
+      <div className="new-pedalboard-card-name">{pedal.name}</div>
+      <input
+        type="button"
+        value="Remove Pedal"
+        onClick={() => handleRemoveClick()}
+      ></input>
     </div>
   );
 }

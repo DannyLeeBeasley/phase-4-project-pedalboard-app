@@ -98,9 +98,11 @@ function App() {
             </Route>
             <Route path="/pedalboards">
               <PedalBoards
-                path="/pedalboards"
+                pedals={pedals}
+                id={pedalboards.id}
                 pedalboards={pedalboards}
                 setPedalboards={setPedalboards}
+                addNewPedalboard={addNewPedalboard}
               />
             </Route>
             <Route path="/newpedalboard" addNewPedalboard={addNewPedalboard}>

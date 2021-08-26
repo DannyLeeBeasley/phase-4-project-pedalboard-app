@@ -14,6 +14,7 @@ class PedalboardsController < ApplicationController
     end
 
     def create 
+        # byebug
         pedalboard = Pedalboard.create(pedalboard_params)
         render json: pedalboard, status: :created
     end
@@ -33,7 +34,7 @@ class PedalboardsController < ApplicationController
     private
 
     def pedalboard_params
-        params.permit(:name, :stereo, :price, :pedal_order, :user_id)
+        params.permit(:name, :stereo, :price, :pedal_order, :user_id, pedal_ids: [])
     end
 
     def find_pedalboard
