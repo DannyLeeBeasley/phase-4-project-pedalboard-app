@@ -33,6 +33,14 @@ function App() {
         setPedals(pedals);
       });
   }, []);
+  useEffect(() => {
+    fetch("http://localhost:3000/pedalboards")
+      .then((r) => r.json())
+      .then((pedalboards) => {
+        console.log("pbnj", pedalboards);
+        setPedalboards(pedalboards);
+      });
+  }, []);
 
   function addNewPedal(newPedal) {
     const updatedPedalArray = [...pedals, newPedal];
@@ -44,7 +52,6 @@ function App() {
     setPedalboards(updatedPedalboardArray);
   }
 
-
   // const { token, setToken } = useToken();
 
   // if (!token) {
@@ -53,11 +60,11 @@ function App() {
   //       <div className="App">
   //         <Navbar />
   //         <Switch>
-  //           <Route path="/login">
-  //             <Login setToken={setToken} />
-  //           </Route>
   //           <Route path="/newuser">
   //             <NewUser />
+  //           </Route>
+  //           <Route path="/">
+  //             <Login setToken={setToken} />
   //           </Route>
   //         </Switch>
   //       </div>
@@ -70,23 +77,34 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
+            <Route path="/newuser">
+              <NewUser />
+            </Route>
             <Route path="/login">
               <Login />
             </Route>
             <Route path="/pedals">
-              <Pedals pedals={pedals} setPedals={setPedals} addNewPedal={addNewPedal}/>
+              <Pedals
+                pedals={pedals}
+                setPedals={setPedals}
+                addNewPedal={addNewPedal}
+              />
             </Route>
             <Route path="/mypedals">
-              <MyPedals />
+              <MyPedals pedals={pedals} />
             </Route>
             <Route path="/newpedal">
               <NewPedal />
             </Route>
             <Route path="/pedalboards">
-              <PedalBoards />
+              <PedalBoards
+                path="/pedalboards"
+                pedalboards={pedalboards}
+                setPedalboards={setPedalboards}
+              />
             </Route>
             <Route path="/newpedalboard" addNewPedalboard={addNewPedalboard}>
-              <NewPedalBoard />
+              <NewPedalBoard pedals={pedals} />
             </Route>
             <Route path="/">
               <Home />

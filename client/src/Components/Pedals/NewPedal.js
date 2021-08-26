@@ -1,20 +1,20 @@
 import React, { Component, useState } from "react";
 import { Form } from "semantic-ui-react";
+import "./Pedals.css";
 
-function NewPedal( { addNewPedal } ) {
-  
-  const [name, setName] = useState('');
-  const [effectType, setEffectType] = useState('')
-  const [isStereo, setIsStereo] = useState(false)
-  const [numberOfInputs, setNumberOfInputs] = useState('')
-  const [numberOfOutputs, setNumberOfOutputs] = useState('')
-  const [price, setPrice] = useState('')
-  const [image, setImage] = useState('')
-  const [category, setCategory] = useState('')
+function NewPedal({ addNewPedal }) {
+  const [name, setName] = useState("");
+  const [effectType, setEffectType] = useState("");
+  const [isStereo, setIsStereo] = useState(false);
+  const [numberOfInputs, setNumberOfInputs] = useState("");
+  const [numberOfOutputs, setNumberOfOutputs] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+  const [category, setCategory] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('http://localhost:3000/pedals', {
+    fetch("http://localhost:3000/pedals", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,12 +27,12 @@ function NewPedal( { addNewPedal } ) {
         number_of_inputs: numberOfInputs,
         number_of_outputs: numberOfOutputs,
         image: image,
-        category: category
+        category: category,
       }),
     })
-    .then(res => res.json())
-    .then(newPedal => addNewPedal(newPedal));
-    window.location.href = "/pedalboards";
+      .then((res) => res.json())
+      .then((newPedal) => addNewPedal(newPedal));
+    window.location.href = "/pedals";
   }
 
   // const handleSubmit = async (e) => {
@@ -42,24 +42,31 @@ function NewPedal( { addNewPedal } ) {
   // };
 
   return (
-    <div>
-      <h1>NewPedal</h1>
+    <div className="new-pedal">
+      <h1 className="new-pedal-header">NewPedal</h1>
       <Form className="new-pedal-form" onSubmit={handleSubmit}>
         <label>
           Pedal Name
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="pedalName"
             placeholder="Pedal Name"
             value={name}
-            onChange={(e) => {setName(e.target.value)}}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
           />
         </label>
         <br />
         <label>
           Effects Type
-          <select name="effectsType" onChange={(e) => {setEffectType(e.target.value)}}>
-            <option value="distortion" >distortion</option>
+          <select
+            name="effectsType"
+            onChange={(e) => {
+              setEffectType(e.target.value);
+            }}
+          >
+            <option value="distortion">distortion</option>
             <option value="gain">gain</option>
             <option value="fuzz">fuzz</option>
             <option value="overdrive">overdrive</option>
@@ -84,7 +91,12 @@ function NewPedal( { addNewPedal } ) {
         <br />
         <label>
           Stereo?
-          <select name="stereo" onChange={(e) => {setIsStereo(e.target.value)}}>
+          <select
+            name="stereo"
+            onChange={(e) => {
+              setIsStereo(e.target.value);
+            }}
+          >
             <option value="false">No</option>
             <option value="true">Yes</option>
           </select>
@@ -92,34 +104,40 @@ function NewPedal( { addNewPedal } ) {
         <br />
         <label>
           Number of Inputs
-          <input 
-            type="integer" 
+          <input
+            type="integer"
             name="numberOfInputs"
             placeholder="Number Of Inputs"
             value={numberOfInputs}
-            onChange={(e) => {setNumberOfInputs(e.target.value)}}
+            onChange={(e) => {
+              setNumberOfInputs(e.target.value);
+            }}
           />
         </label>
         <br />
         <label>
           Number of Outputs
-          <input 
-            type="integer" 
+          <input
+            type="integer"
             name="numberOfOutputs"
             placeholder="Number Of Outputs"
             value={numberOfOutputs}
-            onChange={(e) => {setNumberOfOutputs(e.target.value)}}
+            onChange={(e) => {
+              setNumberOfOutputs(e.target.value);
+            }}
           />
         </label>
         <br />
         <label>
           Price
-          <input 
-            type="text" 
+          <input
+            type="text"
             name="price"
             placeholder="Price"
             value={price}
-            onChange={(e) => {setPrice(e.target.value)}}
+            onChange={(e) => {
+              setPrice(e.target.value);
+            }}
           />
         </label>
         <br />
@@ -129,7 +147,9 @@ function NewPedal( { addNewPedal } ) {
             type="text"
             name="image"
             value={image}
-            onChange={(e) => {setImage(e.target.value)}}
+            onChange={(e) => {
+              setImage(e.target.value);
+            }}
             // value={selectedFile}
             // onChange={(e) => setSelectedFile(e.target.files[0])}
           />
@@ -137,7 +157,12 @@ function NewPedal( { addNewPedal } ) {
         <br />
         <label>
           Effects Category
-          <select name="effectsCategory" onChange={(e) => {setCategory(e.target.value)}}>
+          <select
+            name="effectsCategory"
+            onChange={(e) => {
+              setCategory(e.target.value);
+            }}
+          >
             <option value="dynamics">dynamics</option>
             <option value="gain">gain</option>
             <option value="modulation">modulation</option>
@@ -146,11 +171,14 @@ function NewPedal( { addNewPedal } ) {
           </select>
         </label>
         <br />
-        <input type="submit" value="Submit"></input>
+        <input
+          type="submit"
+          className="new-pedal-submit-button"
+          value="Submit"
+        ></input>
       </Form>
     </div>
   );
 }
-
 
 export default NewPedal;

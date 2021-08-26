@@ -2,10 +2,10 @@ class UsersController < ApplicationController
     wrap_parameters format: []
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
-    # def index
-    #     users = User.all 
-    #     render json: users, status: :ok 
-    # end
+    def index
+        users = User.all 
+        render json: users, status: :ok 
+    end
 
     def show
         user = find_user
@@ -13,8 +13,12 @@ class UsersController < ApplicationController
     end
 
     def create 
-        user = User.create(user_params)
-        render json: user, status: :created
+        user = User.new(user_params)
+        if user.save 
+            render json: user, status: :created
+        else 
+            render json: { error: "invalid data"}, status: 400
+        end
     end
 
     # def login
@@ -41,7 +45,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:name, :username, :email, :notes, :password)
+        params.permit(:name, :username, :email, :password_digest)
     end
 
     def find_user
