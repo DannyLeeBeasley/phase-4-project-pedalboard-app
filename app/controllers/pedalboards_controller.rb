@@ -34,8 +34,9 @@ class PedalboardsController < ApplicationController
     private
 
     def pedalboard_params
-        params.permit(:name, :stereo, :price, :pedal_order, :user_id, pedal_ids: [])
-    end
+        params.permit(:name, :stereo, :price, :pedal_order, :user_id)
+        # , pedal_ids: []
+    end,
 
     def find_pedalboard
         Pedalboard.find(params[:id])

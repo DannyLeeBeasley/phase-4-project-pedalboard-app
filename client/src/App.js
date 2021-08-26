@@ -15,6 +15,12 @@ import { useEffect, useState } from "react";
 function App() {
   const [pedals, setPedals] = useState([]);
   const [pedalboards, setPedalboards] = useState([]);
+  const [user, setUser] = useState(null);
+  
+  const history = useHistory();
+  console.log(user)
+  if(!user)history.push('/sign_up');
+
 
   // useEffect(() => {
   //   async function fetchPedals() {
@@ -81,7 +87,7 @@ function App() {
               <NewUser />
             </Route>
             <Route path="/login">
-              <Login />
+              <Login user={user} setUser={setUser}/>
             </Route>
             <Route path="/pedals">
               <Pedals
