@@ -18,17 +18,17 @@
   transition: all 3s ease-in-out;
 }
 
-.pedals {
+/* .pedals {
   border: 3px solid rgb(103, 122, 68);
   border-radius: 20px;
   padding: 10px;
   margin: auto;
-  /* margin-bottom: 100px; */
-}
+  
+} */
 
 .pedal {
   border: 3px solid rgb(168, 157, 4);
-  box-shadow: 15px 15px #000000;
+  box-shadow: 15px 15px #1a1a1a;
   -webkit-box-shadow-stroke-width: 0.75px;
   -webkit-box-shadow-stroke-color: black;
   border-radius: 20px;
@@ -40,7 +40,7 @@
 }
 
 .pedal:hover {
-  box-shadow: -30px -20px #110404;
+  box-shadow: -30px -20px #1a1a1a;
   transition: all 7s ease-in-out;
 }
 
@@ -80,14 +80,15 @@
   font-family: "Bungee", cursive;
   padding: 10px;
   color: rgb(216, 171, 104);
-  filter: brightness(2);
-  -webkit-filter: brightness(2);
+  /* filter: brightness(2);
+  -webkit-filter: brightness(2); */
   text-shadow: 2px 2px #1d1c00;
   -webkit-text-stroke-width: 0.75px;
   -webkit-text-stroke-color: black;
   /* font-weight: bold; */
-  font-size: 18px;
-  gap: 0.15rem;
+  font-size: 25px;
+  padding-bottom: 10px;
+  transition: all 3s ease-in-out;
 }
 .pedal-nav-links {
   display: flex;
@@ -103,7 +104,7 @@
   -webkit-text-shadow-stroke-width: 1px;
   -webkit-text-shadow-stroke-color: black;
   /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 35px;
   -webkit-text-stroke-width: 0.75px;
   -webkit-text-stroke-color: black;
   transition: all 3s ease-in-out;
@@ -114,15 +115,17 @@
   margin: auto;
   margin-bottom: 10px;
   font-family: "Bungee", cursive;
-  padding: 5px;
+  padding: 10px;
   color: rgb(216, 171, 104);
-  filter: brightness(2);
-  -webkit-filter: brightness(2);
+  /* filter: brightness(2);
+  -webkit-filter: brightness(2); */
   text-shadow: 2px 2px #1d1c00;
   -webkit-text-stroke-width: 0.75px;
   -webkit-text-stroke-color: black;
   /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 25px;
+  padding-bottom: 10px;
+  transition: all 3s ease-in-out;
 }
 
 .my-pedals-link:hover {
@@ -133,7 +136,7 @@
   -webkit-text-shadow-stroke-width: 1px;
   -webkit-text-shadow-stroke-color: black;
   /* font-weight: bold; */
-  font-size: 18px;
+  font-size: 35px;
   -webkit-text-stroke-width: 0.75px;
   -webkit-text-stroke-color: black;
   transition: all 3s ease-in-out;
@@ -196,7 +199,7 @@
   max-height: 500px;
   border: 1px solid black;
   border-radius: 20px;
-  box-shadow: 5px 5px black;
+  box-shadow: 5px 5px rgb(65, 25, 25);
   transition: all 3s ease-in-out;
 }
 .pedal-img:hover {
@@ -204,7 +207,7 @@
   max-height: 500px;
   border: 1px solid black;
   border-radius: 20px;
-  box-shadow: -10px -10px black;
+  box-shadow: -10px -10px rgb(65, 25, 25);
   transition: all 3s ease-in-out;
 }
 

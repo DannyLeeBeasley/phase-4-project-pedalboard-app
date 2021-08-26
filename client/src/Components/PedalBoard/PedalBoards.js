@@ -10,6 +10,8 @@ function PedalBoards({ pedalboards, addNewPedalboard }) {
         <a className="new-pedalboard-link" href="./newpedalboard">
           Make New PedalBoard
         </a>
+        <br />
+        <br />
       </div>
       {pedalboards.map((pb) => {
         return (
@@ -20,6 +22,7 @@ function PedalBoards({ pedalboards, addNewPedalboard }) {
             stereo={pb.stereo}
             pedals={pb.pedals}
             pedalboards={pedalboards}
+            className="pedalboards"
           />
         );
       })}

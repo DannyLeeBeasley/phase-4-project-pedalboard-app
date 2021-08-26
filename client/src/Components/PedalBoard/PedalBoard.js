@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import "./Pedalboard.css";
 
 function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
   console.log("pedalTester", id);
@@ -18,27 +19,37 @@ function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
   }
 
   return (
-    <div className="PedalBoard">
-      <div>{name}</div>
-      <br />
-      <div>{stereo}</div>
-      <br />
-      <div>
+    <div className="pedalboard-card">
+      <div className="pedalboard-pedal-card-header">{name}</div>
+      {/* <br /> */}
+      {/* <div>{stereo}</div> */}
+
+      <h2 className="signal-flow-header">Signal Flow:</h2>
+      <h2>⇇Output⇇⇇⇇Input⇇</h2>
+      <div className="pedalboard">
+        <div className="signal-flow-arrow">⇇</div>
         {pedals.map((pedal) => {
           return (
-            <div>
-              {pedal.name}
-              <img alt={pedal.name} src={pedal.image} />
+            <div className="pedalboard-pedal-card">
+              <div className="pedalboard-pedal-card-title">{pedal.name}</div>
+              <img
+                className="pedalboard-pedal-card-image"
+                alt={pedal.name}
+                src={pedal.image}
+              />
             </div>
           );
         })}
-        <button className="update-pedalboard" onClick="">
-          Update
-        </button>
-        <button className="delete-pedalboard" onClick={handleDeletePedalboard}>
-          Delete
-        </button>
+        <div className="signal-flow-arrow">⇇</div>
       </div>
+      <button className="update-pedalboard" onClick="">
+        Update
+      </button>
+      <button className="delete-pedalboard" onClick={handleDeletePedalboard}>
+        Delete
+      </button>
+      <br />
+      <br />
     </div>
   );
 }

@@ -101,8 +101,10 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
           value="Add Pedal?"
           onClick={handleAddClick}
         ></input>
+        <h2>Signal </h2>
         <h2>←Output←←←Input←</h2>
         <div className="new-pedalboard-body">
+          <div className="signal-flow-arrow">⇇</div>
           {addedPedals.map((pedal, i) => (
             <Pedal
               // handleRemoveClick={handleRemoveClick}
@@ -113,6 +115,7 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
               pedalIndex={i}
             />
           ))}
+          <div className="signal-flow-arrow">⇇</div>
         </div>
         <br></br>
         <input type="submit" value="Submit"></input>
