@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
 import { Button } from "../Button";
 import "./Navbar.css";
+import { Link } from 'react-router-dom';
 
-class Navbar extends Component {
-  state = { clicked: false };
+const Navbar = ({ user }) => {
+  const [showMenu, setShowMenu] = React.useState(false)
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
-  };
-
-  render() {
     return (
       <nav className="NavbarItems">
         <a href="/">
@@ -62,31 +58,33 @@ class Navbar extends Component {
             </i>
           </h1>
         </a>
-        <div className="menu-icon" onClick={this.handleClick}>
+
+        { user && <>
+        <div className="menu-icon" onClick={() => setShowMenu(!showMenu)}>
           <i
-            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+            className={showMenu ? "fas fa-times" : "fas fa-bars"}
           ></i>
         </div>
         <div className="background-img">
           <ul
-            className={this.state.clicked ? "nav-menu active" : "nav-menu"}
+            className={showMenu ? "nav-menu active" : "nav-menu"}
             style={{ listStyleType: "none" }}
           >
             {MenuItems.map((item, index) => {
               return (
-                <li>
-                  <a className={item.cName} href={item.url}>
+                <li key={index}>
+                  <Link className={item.cName} to={item.url}>
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
           </ul>
         </div>
+        </> }
+       
         {/* <Button>Sign Up</Button> */}
       </nav>
-    );
-  }
-}
+    )};
 
 export default Navbar;

@@ -8,13 +8,25 @@ import MyPedals from "./Components/Pedals/MyPedals";
 import NewPedal from "./Components/Pedals/NewPedal";
 import PedalBoards from "./Components/PedalBoard/PedalBoards";
 import NewPedalBoard from "./Components/PedalBoard/NewPedalBoard";
-import useToken from "./useToken";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import useToken from "./useToken";
+import { Route, Switch, useHistory } from "react-router-dom";
+// import { useHistory } from "react-router";
 import { useEffect, useState } from "react";
+const API_PATH = `http://localhost:3000/`
+
 
 function App() {
   const [pedals, setPedals] = useState([]);
   const [pedalboards, setPedalboards] = useState([]);
+  const [user, setUser] = useState(null);
+  
+  const history = useHistory();
+  
+  useEffect(() => {
+    if (!user) history.push('/login')
+    else history.push('/');
+  }, [user])
+
 
   // useEffect(() => {
   //   async function fetchPedals() {
@@ -33,6 +45,7 @@ function App() {
         setPedals(pedals);
       });
   }, []);
+
   useEffect(() => {
     fetch("http://localhost:3000/pedalboards")
       .then((r) => r.json())
@@ -52,36 +65,16 @@ function App() {
     setPedalboards(updatedPedalboardArray);
   }
 
-  // const { token, setToken } = useToken();
-
-  // if (!token) {
-  //   return (
-  //     <Router>
-  //       <div className="App">
-  //         <Navbar />
-  //         <Switch>
-  //           <Route path="/newuser">
-  //             <NewUser />
-  //           </Route>
-  //           <Route path="/">
-  //             <Login setToken={setToken} />
-  //           </Route>
-  //         </Switch>
-  //       </div>
-  //     </Router>
-  //   );
-  // }
   return (
-    <Router>
       <div className="App">
-        <Navbar />
+        <Navbar user={user} setUser={setUser}/>
         <div className="content">
           <Switch>
             <Route path="/newuser">
               <NewUser />
             </Route>
             <Route path="/login">
-              <Login />
+              <Login setUser={setUser}/>
             </Route>
             <Route path="/pedals">
               <Pedals
@@ -105,8 +98,8 @@ function App() {
                 addNewPedalboard={addNewPedalboard}
               />
             </Route>
-            <Route path="/newpedalboard" addNewPedalboard={addNewPedalboard}>
-              <NewPedalBoard pedals={pedals} />
+            <Route path="/newpedalboard" >
+              <NewPedalBoard pedals={pedals} addNewPedalboard={addNewPedalboard} history={history} user={user}/>
             </Route>
             <Route path="/">
               <Home />
@@ -114,7 +107,6 @@ function App() {
           </Switch>
         </div>
       </div>
-    </Router>
   );
 }
 

@@ -1,9 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./Pedalboard.css";
+import { useHistory } from 'react-router'
 
-function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
-  console.log("pedalTester", id);
+function PedalBoard({ name, pedals, stereo, id, addNewPedalboard, pedalboards, setPedalboards }) {
+  console.log("pedalTester", pedals);
+
+  const history = useHistory()
 
   function handleDeletePedalboard() {
     fetch(`http://localhost:3000/pedalboards/${id}`, {
@@ -15,7 +18,9 @@ function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
     })
       .then((res) => res.json())
       .then((newPedal) => addNewPedalboard(newPedal));
-    window.location.href = "/pedalboards";
+      // const updatedPedalboardArray = [...pedalboards].filter((pedalboard) => pedalboard.id !== itemToDelete.id);
+      // setPedalboards(updatedPedalboardArray);
+      history.push("/pedalboards");
   }
 
   return (
@@ -28,7 +33,8 @@ function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
       <h2 className="signal-flow-header">⇇Output⇇⇇⇇Input⇇</h2>
       <div className="pedalboard">
         <div className="signal-flow-arrow">⇇</div>
-        {pedals.map((pedal) => {
+        {/* {pedals.map((pedal) => {
+          console.log(pedals, "boom")
           return (
             <div className="pedalboard-pedal-card">
               <div className="pedalboard-pedal-card-title">{pedal.name}</div>
@@ -39,7 +45,7 @@ function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
               />
             </div>
           );
-        })}
+        })} */}
         <div className="signal-flow-arrow">⇇</div>
       </div>
       <button className="update-pedalboard" onClick="">
