@@ -17,7 +17,7 @@ function NewUser() {
         name: name,
         username: username,
         email: email,
-        password_digest: password,
+        password: password,
       }),
     }).then((res) => res.json());
     window.location.href = "/login";
@@ -59,7 +59,7 @@ function NewUser() {
         <label>
           Password
           <input
-            type="text"
+            type="password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}

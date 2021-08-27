@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import PedalBoard from "./PedalBoard.js";
 import "./Pedalboard.css";
+import { Link } from "react-router-dom";
+
 function PedalBoards({ pedalboards, addNewPedalboard }) {
   console.log("test", pedalboards);
   return (
     <div>
       <h1 className="pedalboard-head">Pedalboards</h1>
       <div className="pedalboard-body">
-        <a className="new-pedalboard-link" href="./newpedalboard">
+        <Link className="new-pedalboard-link" to="./newpedalboard">
           Make New PedalBoard
-        </a>
+        </Link>
         <br />
         <br />
       </div>

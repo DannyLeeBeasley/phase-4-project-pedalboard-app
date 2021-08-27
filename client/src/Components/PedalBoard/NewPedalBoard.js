@@ -1,8 +1,10 @@
 // import { useParams } from "react-router-dom";
 import React, { useState } from "react";
 import "./Pedalboard.css";
+import { useHistory } from "react-router"
 
-function NewPedalBoard({ addNewPedalboard, pedals }) {
+
+function NewPedalBoard({ addNewPedalboard, pedals, user }) {
   const [name, setName] = useState("");
   const [isStereo, setIsStereo] = useState(false);
   // const [pedalOrder, setPedalOrder] = useState([]);
@@ -23,6 +25,8 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
   // const [pedalOrder, setPedalOrder] = useState([])
 
   // const paramsPort = useParams();
+  const history = useHistory();
+
   function handleSubmit(e) {
     e.preventDefault();
     fetch("http://localhost:3000/pedalboards", {
@@ -34,7 +38,7 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
         name: name,
         stereo: isStereo,
         pedal_order: "",
-        user_id: 2,
+        user_id: user.id,
         pedal_ids: addedPedals.map((pedal) => {
           return pedal.id;
         }),
@@ -42,7 +46,7 @@ function NewPedalBoard({ addNewPedalboard, pedals }) {
     })
       .then((res) => res.json())
       .then((NewPedalboard) => addNewPedalboard(NewPedalboard));
-    window.location.href = "/pedalboards";
+      history.push('/pedalboards');
   }
   return (
     <div className="new-pedal-board">
