@@ -37,7 +37,7 @@ function App() {
     fetch("http://localhost:3000/pedalboards")
       .then((r) => r.json())
       .then((pedalboards) => {
-        console.log("pbnj", pedalboards);
+        // console.log("pbnj", pedalboards);
         setPedalboards(pedalboards);
       });
   }, []);

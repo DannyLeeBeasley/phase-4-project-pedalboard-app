@@ -25,7 +25,7 @@ function PedalBoard({ name, pedals, stereo, id, addNewPedalboard }) {
       {/* <div>{stereo}</div> */}
 
       <h2 className="signal-flow-header">Signal Flow:</h2>
-      <h2>⇇Output⇇⇇⇇Input⇇</h2>
+      <h2 className="signal-flow-header">⇇Output⇇⇇⇇Input⇇</h2>
       <div className="pedalboard">
         <div className="signal-flow-arrow">⇇</div>
         {pedals.map((pedal) => {
